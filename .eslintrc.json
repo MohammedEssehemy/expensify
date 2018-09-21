@@ -1,0 +1,65 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "env": {
+    "node": 1,
+    "meteor": 1,
+    "browser": 1,
+    "mocha": 1
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "global-require": [
+      "warn"
+    ],
+    "no-debugger": [
+      "off"
+    ],
+    "max-len": [
+      "warn"
+    ],
+    "no-param-reassign": [
+      "off"
+    ],
+    "no-underscore-dangle": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none"
+      }
+    ],
+    "camelcase": "warn",
+    "import/extensions": [
+      "error",
+      {
+        "ignore": [
+          "^meteor.*"
+        ]
+      }
+    ],
+    "import/no-absolute-path": [
+      "error",
+      {
+        "ignore": [
+          "/imports"
+        ]
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [
+          "^meteor.*",
+          "/imports.*"
+        ]
+      }
+    ],
+    "react/jsx-filename-extension": ["off"],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }]
+
+  }
+}
