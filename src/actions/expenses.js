@@ -1,28 +1,30 @@
-import { ADD_EXPENSE, EDIT_EXPENSE, REMOVE_EXPENSE } from './../constants/actionTypes';
 import uuid from 'uuid';
+import { ADD_EXPENSE, EDIT_EXPENSE, REMOVE_EXPENSE } from '../constants/actionTypes';
 
-export const addExpense = ({ description, amount, note = '', createdAt = 0  }) => ({
+export const addExpense = ({
+  description, amount, note = '', createdAt = 0,
+}) => ({
   type: ADD_EXPENSE,
   payload: {
     id: uuid(),
     description,
     amount,
     note,
-    createdAt
-  }
+    createdAt,
+  },
 });
 
-export const editExpense = (id , updates ) => ({
+export const editExpense = (id, updates) => ({
   type: EDIT_EXPENSE,
   payload: {
     id,
-    updates
-  }
+    updates,
+  },
 });
 
-export const removeExpense = (id) => ({
+export const removeExpense = id => ({
   type: REMOVE_EXPENSE,
   payload: {
-    id
-  }
+    id,
+  },
 });

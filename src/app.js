@@ -8,4 +8,4 @@ import './styles/styles.scss';
 console.log(store.getState());
 const appRoot = document.getElementById('app');
 
-ReactDOM.render(<AppRouter />, appRoot)
+ReactDOM.render(<AppRouter />, appRoot);

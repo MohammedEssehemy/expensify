@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default (props) => (
+export default props => (
   <div>
-    Edit Expense Page - {props.match.params.id}
+    Edit Expense Page -
+    {' '}
+    {props.match.params.id}
   </div>
 );
