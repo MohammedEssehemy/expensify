@@ -1,7 +1,10 @@
 import React from 'react';
+import ExpensesList from './ExpensesList';
+import ExpensesListFilters from './ExpensesListFilters';
 
 export default () => (
   <div>
-    Expense Dashboard Page
+    <ExpensesListFilters />
+    <ExpensesList />
   </div>
 );

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "precommit": "lint-staged",
-    "lint": "eslint --debug --fix",
+    "lint": "eslint --fix",
     "start": "webpack-dev-server",
     "build": "webpack",
     "build-watch": "webpack --watch",
@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "npm run lint --",
+      "eslint --fix",
       "git add"
     ]
   },
@@ -49,9 +49,11 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-modal": "^3.5.1",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "uuid": "^3.3.2"
