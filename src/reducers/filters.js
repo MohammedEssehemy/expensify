@@ -1,9 +1,10 @@
+import moment from 'moment';
 import {
   SET_TEXT_FILTER, SORT_BY_AMOUNT, SORT_BY_DATE, SET_START_DATE, SET_END_DATE,
 } from '../constants/actionTypes';
 
 const defaultState = {
-  text: '', sortBy: 'date', startDate: undefined, endDate: undefined,
+  text: '', sortBy: 'date', startDate: moment().startOf('month'), endDate: moment().endOf('month'),
 };
 
 export default (state = defaultState, action) => {

@@ -1,36 +1,30 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeExpense } from '../actions/expenses';
+import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 const ExpenseListItem = ({
-  id, createdAt, description, amount, dispatch,
+  id, createdAt, description, amount,
 }) => (
   <div>
-    <h3>{description}</h3>
+    <Link to={`/edit/${id}`}>
+      <h3>{description}</h3>
+    </Link>
     <p>
-      {amount}
-      -
-      {createdAt}
+      {(amount / 100).toFixed(2)}
+      <br />
+      {moment(createdAt).format()}
     </p>
-    <button
-      type="button"
-      onClick={() => {
-        dispatch(removeExpense(id));
-      }}
-    >
-      remove
-    </button>
+
     <div />
   </div>
 );
 
 ExpenseListItem.propTypes = {
   id: PropTypes.string.isRequired,
-  createdAt: PropTypes.string.isRequired,
+  createdAt: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  dispatch: PropTypes.func.isRequired,
+  amount: PropTypes.number.isRequired,
 };
 
-export default connect()(ExpenseListItem);
+export default ExpenseListItem;

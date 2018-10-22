@@ -16,9 +16,9 @@ const ExpensesList = ({ expenses }) => (
 ExpensesList.propTypes = {
   expenses: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
-    createdAt: PropTypes.string.isRequired,
+    createdAt: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
-    amount: PropTypes.string.isRequired,
+    amount: PropTypes.number.isRequired,
   })).isRequired,
 };
 const mapStateToProps = state => ({
